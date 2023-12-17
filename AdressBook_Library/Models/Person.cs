@@ -1,6 +1,8 @@
-﻿namespace AdressBook_Library.Models
+﻿using AdressBook_Library.Interfaces;
+
+namespace AdressBook_Library.Models
 {
-    public class Contact
+    public class Person: IPerson
     {
         public string FirstName { get; set; } = null!;
 
@@ -19,9 +21,9 @@
         public string Country { get; set; } = null!;
 
 
-        public Contact() { }
+        public Person() { }
 
-        public Contact(string firstName, string lastName, string phoneNumber, string email, string street, string zipCode, string city, string country)
+        public Person(string firstName, string lastName, string phoneNumber, string email, string street, string zipCode, string city, string country)
         {
             FirstName = firstName;
             LastName = lastName;

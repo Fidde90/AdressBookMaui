@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:model="clr-namespace:AdressBook_Library.Models;assembly=AdressBook_Library"
+             xmlns:viewmodel="clr-namespace:AdressBookMaui.ViewModels"
+             x:DataType="{x:Type viewmodel:AddPersonViewModel}"
+             x:Class="AdressBookMaui.Pages.AddPersonPage"
+             Title="AddPersonPage">
+    
+    <ScrollView>
+        <Grid RowDefinitions=" auto, *" Margin="20">
+            <VerticalStackLayout Grid.Row="0">
+                <Label Text="First Name" Margin="0,10" />
+                <Entry Text="{Binding RegistrationForm.FirstName}" />
+
+                <Label Text="Last Name" Margin="0,10"/>
+                <Entry Text="{Binding RegistrationForm.LastName}" />
+                
+                <Label Text="Phone Number" Margin="0,10" />
+                <Entry Text="{Binding RegistrationForm.PhoneNumber}" />
+
+                <Label Text="Email" Margin="0,10"/>
+                <Entry Text="{Binding RegistrationForm.Email}" />
+                
+                <Label Text="Street" Margin="0,10" />
+                <Entry Text="{Binding RegistrationForm.Street}" />
+
+                <Label Text="ZipCode" Margin="0,10"/>
+                <Entry Text="{Binding RegistrationForm.ZipCode}" />
+                
+                <Label Text="City" Margin="0,10" />
+                <Entry Text="{Binding RegistrationForm.City}" />
+
+                <Label Text="Country" Margin="0,10"/>
+                <Entry Text="{Binding RegistrationForm.Country}" />
+
+                <Button  Text="Add" Margin="0,20,0,20" Padding="0,10"/>
+            </VerticalStackLayout>
+
+        
+        </Grid>
+    </ScrollView>
+</ContentPage>

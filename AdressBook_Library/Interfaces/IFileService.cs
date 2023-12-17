@@ -2,7 +2,7 @@
 {
     public interface IFileService
     {
-        bool WriteToFile(List<IContact> contactList);
+        bool WriteToFile(List<IPerson> contactList);
 
         string ReadFromFile();
     }

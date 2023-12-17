@@ -1,10 +1,10 @@
 ﻿namespace AdressBook_Library.Interfaces
 {
-    public interface IContactService
+    public interface IPersonService
     {
-        bool AddContactToList(IContact contact);
+        bool AddContactToList(IPerson contact);
 
-        ICollection<IContact> GetAllContactsFromList();
+        ICollection<IPerson> GetAllContactsFromList();
 
         void GetContactFromList(string email);
 

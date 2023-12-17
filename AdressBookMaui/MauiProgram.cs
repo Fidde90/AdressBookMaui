@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using AdressBookMaui.Pages;
+using AdressBookMaui.ViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace AdressBookMaui
 {
@@ -15,8 +17,11 @@ namespace AdressBookMaui
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<AddPersonPage>();
+            builder.Services.AddSingleton<AddPersonViewModel>();
+          
 
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 
 
             return builder.Build();

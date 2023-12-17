@@ -1,6 +1,6 @@
 ﻿namespace AdressBook_Library.Interfaces
 {
-    public interface IContact
+    public interface IPerson
     {
         string FirstName { get; set; }
 
