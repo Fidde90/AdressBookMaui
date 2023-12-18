@@ -29,6 +29,5 @@ namespace AdressBookMaui.ViewModels
                 }
             }
         }
-
     }
 }

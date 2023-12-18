@@ -14,25 +14,22 @@
             <CollectionView  ItemsSource="{Binding ObservablePersonList}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type model:Person}">
-                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="10" Margin="0"> 
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="10" Margin="0">
                             <Grid>
-                                <VerticalStackLayout>
-                                  
-                                    <Label Text="{Binding FirstName}" />
-                                    <Label Text="{Binding LastName}" />
-
-                                </VerticalStackLayout>
+                                <Grid>
+                                    <VerticalStackLayout >
+                                        <HorizontalStackLayout>
+                                            <Label Text="{Binding FirstName}" Margin="5" />
+                                            <Label Text="{Binding LastName}" Margin="5" />
+                                        </HorizontalStackLayout>
+                                        <Label Text="{Binding Email}" Margin="3" />
+                                    </VerticalStackLayout>
+                                </Grid>
                             </Grid>
                         </Frame>
-               
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
     </ScrollView>
-
-        
-
-    
-    
 </ContentPage>

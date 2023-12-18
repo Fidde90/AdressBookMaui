@@ -5,6 +5,12 @@ namespace AdressBook_Library.Services
 {
     public class PersonService : IPersonService
     {
+        public PersonService(IFileService fileservice)
+        {
+            _fileservice = fileservice;
+        }
+        private readonly IFileService _fileservice;
+
         private readonly List<IPerson> _personList = new List<IPerson>();
 
         public event EventHandler? PersonListUpdated;
@@ -15,6 +21,7 @@ namespace AdressBook_Library.Services
             if (!string.IsNullOrWhiteSpace(person.Email))
             {
                 _personList.Add(person);
+                _fileservice.WriteToFile(_personList);
                 PersonListUpdated?.Invoke(this, EventArgs.Empty); // använd varje gång man gör något med listan
                 return true;
             }

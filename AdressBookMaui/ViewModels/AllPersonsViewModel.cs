@@ -14,10 +14,10 @@ namespace AdressBookMaui.ViewModels
 
             ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList());//This fix
 
-            //_personService.PersonListUpdated += (sender, e) =>
-            //{
-            //    ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList());
-            //};
+            _personService.PersonListUpdated += (sender, e) =>
+            {
+                ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList());
+            };
         }
 
 
