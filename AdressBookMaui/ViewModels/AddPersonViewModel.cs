@@ -1,6 +1,5 @@
 ﻿using AdressBook_Library.Interfaces;
 using AdressBook_Library.Models;
-using AdressBook_Library.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
@@ -42,14 +41,7 @@ namespace AdressBookMaui.ViewModels
         [RelayCommand]
         private void UpdateList()
         {
-            ObservablePersonList.Clear();
-
-            foreach (var person in _personService.GetAllPersonsFromList())
-            {
-                ObservablePersonList.Add(person);
-            }
-
-            //ObservablePersonList = new ObservableCollection<IPerson>(_personService.PersonList.Select(person => person).ToList());
+            ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList());
         }
     }
 }

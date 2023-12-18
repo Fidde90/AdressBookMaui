@@ -6,8 +6,6 @@ namespace AdressBook_Library.Services
     public class PersonService : IPersonService
     {
         private readonly List<IPerson> _personList = new List<IPerson>();
-        //public List<IPerson> PersonList { get; set; } = [];
-
 
         public bool AddPersonToList(IPerson person)
         {
@@ -37,8 +35,6 @@ namespace AdressBook_Library.Services
         public void GetPersonFromList(string email)
         {
 
-        }
-
-       
+        }      
     }
 }

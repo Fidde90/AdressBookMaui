@@ -20,9 +20,12 @@ namespace AdressBookMaui
                 });
 
             builder.Services.AddSingleton<IPersonService,PersonService>();
+
             builder.Services.AddSingleton<AddPersonPage>();
             builder.Services.AddSingleton<AddPersonViewModel>();
-          
+
+            builder.Services.AddSingleton<AllPersonsPage>();
+            builder.Services.AddSingleton<AllPersonsViewModel>();
 
             builder.Logging.AddDebug();
 
