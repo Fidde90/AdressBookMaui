@@ -20,10 +20,10 @@ namespace AdressBookMaui.ViewModels
         [RelayCommand]
         void AddPerson()
         {
-            if (RegistrationForm != null && !string.IsNullOrWhiteSpace(RegistrationForm.Email))
+            if (!string.IsNullOrWhiteSpace(RegistrationForm.Email))
             {
-                var result = _personService.AddPersonToList(RegistrationForm)!;
-                if (result)
+                var succeed = _personService.AddPersonToList(RegistrationForm)!;
+                if (succeed)
                 {
                     RegistrationForm = new();
                 }

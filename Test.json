@@ -1,0 +1,57 @@
+[
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "ff",
+    "LastName": "ff",
+    "PhoneNumber": "ff",
+    "Email": "ff",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "22",
+    "LastName": "22",
+    "PhoneNumber": "2",
+    "Email": "22",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "11",
+    "LastName": "11",
+    "PhoneNumber": "11",
+    "Email": "11",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "bb",
+    "LastName": "bb",
+    "PhoneNumber": "bb",
+    "Email": "b",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "tt",
+    "LastName": "tt",
+    "PhoneNumber": "tt",
+    "Email": "tt",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  }
+]

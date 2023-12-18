@@ -1,4 +1,6 @@
+using AdressBook_Library.Interfaces;
 using AdressBookMaui.ViewModels;
+using System.Collections.ObjectModel;
 
 namespace AdressBookMaui.Pages
 {

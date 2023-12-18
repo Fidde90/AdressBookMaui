@@ -1,5 +1,8 @@
 ﻿using AdressBook_Library.Interfaces;
 using AdressBook_Library.Models;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace AdressBook_Library.Services
 {
@@ -11,20 +14,25 @@ namespace AdressBook_Library.Services
         }
         private readonly IFileService _fileservice;
 
-        private readonly List<IPerson> _personList = new List<IPerson>();
+        private List<IPerson> _personList = new List<IPerson>();
 
         public event EventHandler? PersonListUpdated;
 
 
         public bool AddPersonToList(IPerson person)
-        {
-            if (!string.IsNullOrWhiteSpace(person.Email))
+        {           
+            try
             {
-                _personList.Add(person);
-                _fileservice.WriteToFile(_personList);
-                PersonListUpdated?.Invoke(this, EventArgs.Empty); // använd varje gång man gör något med listan
-                return true;
+                if (!string.IsNullOrWhiteSpace(person.Email))
+                {
+                    _personList.Add(person);
+                    _fileservice.WriteToFile(_personList);
+                    PersonListUpdated?.Invoke(this, EventArgs.Empty); // använd varje gång man gör något med listan
+                    return true;
+
+                }
             }
+            catch (Exception e) { Debug.WriteLine(e.Message); }
             return false;
         }
 
@@ -40,12 +48,27 @@ namespace AdressBook_Library.Services
 
         public IEnumerable<IPerson> GetAllPersonsFromList()
         {
-            return _personList;
+            try
+            {
+                var JsonizedList = _fileservice.ReadFromFile();
+
+                if (!string.IsNullOrEmpty(JsonizedList))
+                {
+                    _personList = JsonConvert.DeserializeObject<List<IPerson>>(JsonizedList, new JsonSerializerSettings
+                    { TypeNameHandling = TypeNameHandling.Auto })!;
+
+                    //PersonListUpdated?.Invoke(this, EventArgs.Empty);
+                    return _personList;
+                }
+            }
+            catch (Exception e) { Debug.WriteLine(e.Message); }
+            return null!;
+
         }
 
         public void GetPersonFromList(string email)
         {
 
-        }      
+        }
     }
 }

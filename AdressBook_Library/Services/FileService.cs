@@ -10,29 +10,40 @@ namespace AdressBook_Library.Services
 
         public string ReadFromFile()
         {
-            return "s";
+            try
+            {
+                if (File.Exists(_filePath))
+                {
+                    using (StreamReader reader = new StreamReader(_filePath))
+                    {
+                        return reader.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception e) { Debug.WriteLine(e.Message); }
+            return null ?? "";
         }
 
         public bool WriteToFile(List<IPerson> contactList)
         {
-            string list = JsonConvert.SerializeObject(contactList, new JsonSerializerSettings
-            {
-                Formatting = Formatting.Indented,
-                TypeNameHandling = TypeNameHandling.Auto
-            });
-
             try
             {
-                if (!string.IsNullOrEmpty(list))
+                string JsonizedList = JsonConvert.SerializeObject(contactList, new JsonSerializerSettings
+                {
+                    Formatting = Formatting.Indented,
+                    TypeNameHandling = TypeNameHandling.Auto
+                });
+
+                if (!string.IsNullOrEmpty(JsonizedList))
                 {
                     using (StreamWriter writer = new StreamWriter(_filePath))
                     {
-                        writer.WriteLine(list);
+                        writer.WriteLine(JsonizedList);
                         return true;
                     }
                 }
             }
-            catch (Exception e) { Debug.WriteLine(e); }
+            catch (Exception e) { Debug.WriteLine(e.Message); }
             return false;
         }
     }
