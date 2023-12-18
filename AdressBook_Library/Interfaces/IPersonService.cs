@@ -1,14 +1,18 @@
-﻿namespace AdressBook_Library.Interfaces
+﻿using AdressBook_Library.Models;
+
+namespace AdressBook_Library.Interfaces
 {
     public interface IPersonService
     {
-        bool AddContactToList(IPerson contact);
+        //List<IPerson> PersonList { get; set; }
 
-        ICollection<IPerson> GetAllContactsFromList();
+        bool AddPersonToList(IPerson contact);
 
-        void GetContactFromList(string email);
+        IEnumerable<IPerson> GetAllPersonsFromList();
 
-        bool DeleteContact(string email);
+        void GetPersonFromList(string email);
+
+        bool DeletePerson(string email);
 
         void Deserializer();
     }

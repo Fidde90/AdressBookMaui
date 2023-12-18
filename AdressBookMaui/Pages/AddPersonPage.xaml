@@ -35,7 +35,8 @@
                 <Label Text="Country" Margin="0,10"/>
                 <Entry Text="{Binding RegistrationForm.Country}" />
 
-                <Button  Text="Add" Margin="0,20,0,20" Padding="0,10"/>
+
+                <Button Command="{Binding AddPersonCommand}" Text="Add" Margin="0,20,0,20" Padding="0,10"/>
             </VerticalStackLayout>
 
         

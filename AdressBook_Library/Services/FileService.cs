@@ -6,12 +6,12 @@ namespace AdressBook_Library.Services
     {
         public string ReadFromFile()
         {
-            throw new NotImplementedException();
+            return "s";
         }
 
         public bool WriteToFile(List<IPerson> contactList)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

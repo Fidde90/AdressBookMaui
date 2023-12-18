@@ -1,32 +1,44 @@
 ﻿using AdressBook_Library.Interfaces;
+using AdressBook_Library.Models;
 
 namespace AdressBook_Library.Services
 {
     public class PersonService : IPersonService
     {
-        public bool AddContactToList(IPerson contact)
+        private readonly List<IPerson> _personList = new List<IPerson>();
+        //public List<IPerson> PersonList { get; set; } = [];
+
+
+        public bool AddPersonToList(IPerson person)
         {
-            throw new NotImplementedException();
+            if (!string.IsNullOrWhiteSpace(person.Email))
+            {
+                _personList.Add(person);
+                return true;
+            }
+            return false;
         }
 
-        public bool DeleteContact(string email)
+        public bool DeletePerson(string email)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public void Deserializer()
         {
-            throw new NotImplementedException();
+
         }
 
-        public ICollection<IPerson> GetAllContactsFromList()
+        public IEnumerable<IPerson> GetAllPersonsFromList()
         {
-            throw new NotImplementedException();
+            return _personList;
         }
 
-        public void GetContactFromList(string email)
+        public void GetPersonFromList(string email)
         {
-            throw new NotImplementedException();
+
         }
+
+       
     }
 }
