@@ -2,8 +2,6 @@
 using AdressBook_Library.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
-
 
 namespace AdressBookMaui.ViewModels
 {
@@ -19,11 +17,6 @@ namespace AdressBookMaui.ViewModels
         [ObservableProperty]
         private Person _registrationForm = new();
 
-        [ObservableProperty]
-        private ObservableCollection<IPerson> _observablePersonList = [];
-
-
-
         [RelayCommand]
         void AddPerson()
         {
@@ -32,16 +25,10 @@ namespace AdressBookMaui.ViewModels
                 var result = _personService.AddPersonToList(RegistrationForm)!;
                 if (result)
                 {
-                    UpdateList();
                     RegistrationForm = new();
                 }
             }
         }
 
-        [RelayCommand]
-        private void UpdateList()
-        {
-            ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList());
-        }
     }
 }

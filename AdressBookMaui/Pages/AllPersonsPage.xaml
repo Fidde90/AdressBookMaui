@@ -9,34 +9,22 @@
              x:Class="AdressBookMaui.Pages.AllPersonsPage"
              Title="AllPersonsPage">
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <ScrollView>
         <Grid>
-            <CollectionView>
+            <CollectionView  ItemsSource="{Binding ObservablePersonList}">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <VerticalStackLayout>
-                                
-                            </VerticalStackLayout>
-                        </Grid>
+                    <DataTemplate x:DataType="{x:Type model:Person}">
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="10" Margin="0"> 
+                            <Grid>
+                                <VerticalStackLayout>
+                                  
+                                    <Label Text="{Binding FirstName}" />
+                                    <Label Text="{Binding LastName}" />
+
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+               
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

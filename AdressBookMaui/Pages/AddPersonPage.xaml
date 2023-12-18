@@ -16,19 +16,19 @@
 
                 <Label Text="Last Name" Margin="0,10"/>
                 <Entry Text="{Binding RegistrationForm.LastName}" />
-                
+
                 <Label Text="Phone Number" Margin="0,10" />
                 <Entry Text="{Binding RegistrationForm.PhoneNumber}" />
 
                 <Label Text="Email" Margin="0,10"/>
                 <Entry Text="{Binding RegistrationForm.Email}" />
-                
+
                 <Label Text="Street" Margin="0,10" />
                 <Entry Text="{Binding RegistrationForm.Street}" />
 
                 <Label Text="ZipCode" Margin="0,10"/>
                 <Entry Text="{Binding RegistrationForm.ZipCode}" />
-                
+
                 <Label Text="City" Margin="0,10" />
                 <Entry Text="{Binding RegistrationForm.City}" />
 
@@ -38,8 +38,6 @@
 
                 <Button Command="{Binding AddPersonCommand}" Text="Add" Margin="0,20,0,20" Padding="0,10"/>
             </VerticalStackLayout>
-
-        
         </Grid>
     </ScrollView>
 </ContentPage>
