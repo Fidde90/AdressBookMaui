@@ -1,46 +1,35 @@
 [
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "4",
-    "LastName": "4",
-    "PhoneNumber": "4",
-    "Email": "4",
-    "Street": "4",
-    "ZipCode": "4",
-    "City": "4",
-    "Country": "4"
+    "FirstName": "Fredrik",
+    "LastName": "Bengtsson",
+    "PhoneNumber": "0709927636",
+    "Email": "kungen1990@hotmail.com",
+    "Street": "Stenbocksgatan 2c",
+    "ZipCode": "28233",
+    "City": "Tyringe",
+    "Country": "Sweden"
   },
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "555",
-    "LastName": "555",
-    "PhoneNumber": null,
-    "Email": "5555",
-    "Street": null,
-    "ZipCode": null,
-    "City": null,
-    "Country": null
+    "FirstName": "Angelina",
+    "LastName": "Rosén",
+    "PhoneNumber": "0708943625",
+    "Email": "angelinarosen@hotmail.com",
+    "Street": "Stenbocksgatan 2c",
+    "ZipCode": "28233",
+    "City": "Tyringe",
+    "Country": "Sweden"
   },
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "99",
-    "LastName": "999",
-    "PhoneNumber": "999",
-    "Email": "99",
-    "Street": "999",
-    "ZipCode": "999",
-    "City": "999",
-    "Country": "99"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "000",
-    "LastName": "00",
-    "PhoneNumber": "00",
-    "Email": "00",
-    "Street": "00",
-    "ZipCode": "00",
-    "City": "00",
-    "Country": "00"
+    "FirstName": "Flaffis",
+    "LastName": "Bengtsson",
+    "PhoneNumber": "0897876543",
+    "Email": "faffe@hotmail.com",
+    "Street": "Flaffisgatan 8A",
+    "ZipCode": "28233",
+    "City": "Flaffisdalen",
+    "Country": "Heaven"
   }
 ]
