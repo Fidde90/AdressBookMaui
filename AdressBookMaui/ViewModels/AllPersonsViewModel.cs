@@ -12,8 +12,8 @@ namespace AdressBookMaui.ViewModels
         {
             _personService = personService;
 
-            if(_personService.GetAllPersonsFromList() != null)
-                    ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList())!;//This fix
+            if (_personService.GetAllPersonsFromList() != null)
+                ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList())!;//This fix
 
             _personService.PersonListUpdated += (sender, e) =>
             {
@@ -22,7 +22,7 @@ namespace AdressBookMaui.ViewModels
         }
 
         [ObservableProperty]
-        private ObservableCollection<IPerson> _observablePersonList = [];
+        public ObservableCollection<IPerson> _observablePersonList = [];
 
     }
 }

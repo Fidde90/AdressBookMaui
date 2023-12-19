@@ -18,6 +18,10 @@
     <FlyoutItem Title="All">
         <ShellContent Title="All" Route="AllPersonsPage" ContentTemplate="{DataTemplate pages:AllPersonsPage}"/>
     </FlyoutItem>
-  
+
+    <FlyoutItem Title="Details">
+        <ShellContent Title="Details" Route="PersonsDetailsPage" ContentTemplate="{DataTemplate pages:PersonDetailsPage}"/>
+    </FlyoutItem>
+
 
 </Shell>

@@ -57,7 +57,6 @@ namespace AdressBook_Library.Services
                     _personList = JsonConvert.DeserializeObject<List<IPerson>>(JsonizedList, new JsonSerializerSettings
                     { TypeNameHandling = TypeNameHandling.Auto })!;
 
-                    //PersonListUpdated?.Invoke(this, EventArgs.Empty);
                     return _personList;
                 }
             }

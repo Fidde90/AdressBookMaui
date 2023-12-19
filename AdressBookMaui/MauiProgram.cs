@@ -22,6 +22,9 @@ namespace AdressBookMaui
             builder.Services.AddSingleton<IPersonService,PersonService>();
             builder.Services.AddSingleton<IFileService, FileService>();
 
+            builder.Services.AddSingleton<PersonDetailsPage>();
+            builder.Services.AddSingleton<PersonDetailsViewModel>();
+
             builder.Services.AddSingleton<AddPersonPage>();
             builder.Services.AddSingleton<AddPersonViewModel>();
 

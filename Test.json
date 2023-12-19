@@ -1,10 +1,21 @@
 [
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "ff",
-    "LastName": "ff",
-    "PhoneNumber": "ff",
-    "Email": "ff",
+    "FirstName": "4",
+    "LastName": "4",
+    "PhoneNumber": "4",
+    "Email": "4",
+    "Street": "4",
+    "ZipCode": "4",
+    "City": "4",
+    "Country": "4"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "555",
+    "LastName": "555",
+    "PhoneNumber": null,
+    "Email": "5555",
     "Street": null,
     "ZipCode": null,
     "City": null,
@@ -12,46 +23,24 @@
   },
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "22",
-    "LastName": "22",
-    "PhoneNumber": "2",
-    "Email": "22",
-    "Street": null,
-    "ZipCode": null,
-    "City": null,
-    "Country": null
+    "FirstName": "99",
+    "LastName": "999",
+    "PhoneNumber": "999",
+    "Email": "99",
+    "Street": "999",
+    "ZipCode": "999",
+    "City": "999",
+    "Country": "99"
   },
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "11",
-    "LastName": "11",
-    "PhoneNumber": "11",
-    "Email": "11",
-    "Street": null,
-    "ZipCode": null,
-    "City": null,
-    "Country": null
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "bb",
-    "LastName": "bb",
-    "PhoneNumber": "bb",
-    "Email": "b",
-    "Street": null,
-    "ZipCode": null,
-    "City": null,
-    "Country": null
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "tt",
-    "LastName": "tt",
-    "PhoneNumber": "tt",
-    "Email": "tt",
-    "Street": null,
-    "ZipCode": null,
-    "City": null,
-    "Country": null
+    "FirstName": "000",
+    "LastName": "00",
+    "PhoneNumber": "00",
+    "Email": "00",
+    "Street": "00",
+    "ZipCode": "00",
+    "City": "00",
+    "Country": "00"
   }
 ]

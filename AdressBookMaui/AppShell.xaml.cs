@@ -10,6 +10,7 @@ namespace AdressBookMaui
 
             Routing.RegisterRoute(nameof(AddPersonPage),typeof(AddPersonPage));
             Routing.RegisterRoute(nameof(AllPersonsPage), typeof(AllPersonsPage));
+            Routing.RegisterRoute(nameof(PersonDetailsPage), typeof(PersonDetailsPage));
         }
     }
 }
