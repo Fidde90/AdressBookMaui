@@ -7,12 +7,14 @@
              x:DataType="{x:Type viewmodel:PersonDetailsViewModel}"
              
              x:Class="AdressBookMaui.Pages.PersonDetailsPage"
-             Title="PersonDetailsPage">
+             Title="Details">
 
-    <ScrollView>
-        <Grid >
-            <VerticalStackLayout Margin="20">
+    <ScrollView >
+        <Grid RowDefinitions="auto,auto,auto,auto,auto,auto" ColumnDefinitions="auto,*">
 
+            <BoxView Grid.Row="0" Grid.ColumnSpan="2" HeightRequest="1" Color="White"  />
+
+            <VerticalStackLayout Margin="20" Grid.Row="1" Grid.ColumnSpan="1" >
                 <HorizontalStackLayout Margin="10,0,0,5">
                     <Label Text="Name:" Margin="0,0,10,0"/>
                     <Label Text="{Binding Person.FirstName}"/>
@@ -23,7 +25,7 @@
                     <Label Text="Email:" Margin="0,0,10,0"/>
                     <Label Text="{Binding Person.Email}" Margin="5,0"/>
                 </HorizontalStackLayout>
-
+  
                 <HorizontalStackLayout Margin="10,0,0,5">
                     <Label Text="Phone number:" Margin="0,0,10,0"/>
                     <Label Text="{Binding Person.PhoneNumber}"/>
@@ -38,12 +40,43 @@
                     <Label Text="{Binding Person.ZipCode}" Margin="65,0,0,0"/>
                     <Label Text="{Binding Person.City}" Margin="10,0"/>
                 </HorizontalStackLayout>
-                <Label Text="{Binding Person.Country}" Margin="65,0,0,0"/>
-
-                <Button Text="Back to &quot;see all&quot;. " Command="{Binding BackToAllPersonsCommand}" Margin="10,50,10,10" MaximumWidthRequest="250" />
-                <Button Text="Back to &quot;add page&quot;. " Command="{Binding BackToAddPersonCommand}" Margin="10" MaximumWidthRequest="250" />
+                <Label Text="{Binding Person.Country}" Margin="65,0,0,0"  />
 
             </VerticalStackLayout>
+            <BoxView Grid.Row="2" Grid.ColumnSpan="2"  HeightRequest="1" Color="White"  />
+
+            <Button Text="Edit" Command="{Binding EditBtnCommand}" MaximumHeightRequest="40" MaximumWidthRequest="100" Grid.Row="1" Grid.Column="2"/>
+
+            <VerticalStackLayout x:Name="editStack" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="{Binding IsStackVisible}">
+
+                <Entry Text="{Binding Person.FirstName}"   Margin="0,20,20,10" MaximumWidthRequest="310"/>
+
+                <Entry Text="{Binding Person.LastName}"   Margin="0,0,20,10" MaximumWidthRequest="310"/>
+                
+                <Entry Text="{Binding Person.PhoneNumber}"   Margin="0,0,20,10" MaximumWidthRequest="310"/>
+
+                <Entry Text="{Binding Person.Email}"  Margin="0,0,20,10" MaximumWidthRequest="310"/>
+
+                <Entry Text="{Binding Person.Street}"  Margin="0,0,20,10" MaximumWidthRequest="310"/>
+
+                <Entry Text="{Binding Person.ZipCode}"   Margin="0,0,20,10" MaximumWidthRequest="310"/>
+
+                <Entry Text="{Binding Person.City}"   Margin="0,0,20,10" MaximumWidthRequest="310"/>
+
+                <Entry Text="{Binding Person.Country}"   Margin="0,0,20,10" MaximumWidthRequest="310"/>
+
+                <Button Text="Save" Command="{Binding SaveBtnCommand}" Margin="0,10,17,0" MaximumWidthRequest="250"/>
+                <BoxView Margin="0,20,0,0" Grid.Row="4" Grid.ColumnSpan="2" HeightRequest="1" Color="White"/>
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout Grid.Row="5" Grid.ColumnSpan="2" >
+                <Button Text="Back to &quot;see all&quot;. " Command="{Binding BackToAllPersonsCommand}" Margin="0,50,17,10" MaximumWidthRequest="250" />
+                <Button Text="Back to &quot;add page&quot;. " Command="{Binding BackToAddPersonCommand}" Margin="0,10,17,10" MaximumWidthRequest="250" />
+            </VerticalStackLayout>
+ 
+
         </Grid>
+
     </ScrollView>
 </ContentPage>

@@ -12,6 +12,8 @@ namespace AdressBook_Library.Interfaces
 
         IPerson GetPersonFromList(string email);
 
+        public void Edit(string email, IPerson person);
+
         bool DeletePerson(string email);
     }
 }

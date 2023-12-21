@@ -1,6 +1,7 @@
 ﻿using AdressBook_Library.Interfaces;
 using AdressBook_Library.Models;
 using Newtonsoft.Json;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Security.AccessControl;
@@ -19,6 +20,20 @@ namespace AdressBook_Library.Services
 
         public event EventHandler? PersonListUpdated;
 
+
+
+        public void Edit(string email, IPerson person)
+        {
+            for (int i = 0; i < _personList.Count; i++)
+            {
+                if (_personList[i].Email == email)
+                {
+                    _personList[i] = person;
+                    _fileService.WriteToFile(_personList);
+                    PersonListUpdated?.Invoke(this, EventArgs.Empty);
+                }
+            }
+        }
 
         public bool AddPersonToList(IPerson person)
         {           

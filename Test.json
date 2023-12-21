@@ -7,17 +7,61 @@
     "Email": "kungen1990@hotmail.com",
     "Street": "Stenbocksgatan 2c",
     "ZipCode": "28233",
-    "City": "Tyringe",
+    "City": "Tyrimge",
     "Country": "Sweden"
   },
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
     "FirstName": "Angelina",
     "LastName": "Rosén",
-    "PhoneNumber": "0708763876",
-    "Email": "angelinarosen@hotmail.com",
+    "PhoneNumber": "0708987654",
+    "Email": "angelinarosen93@hotmail.com",
     "Street": "Stenbocksgatan 2c",
     "ZipCode": "28233",
+    "City": "Tyringe",
+    "Country": "Sweden"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "Flaffis",
+    "LastName": "Bengtsson",
+    "PhoneNumber": "0709927636",
+    "Email": "flaff@vavve@hotmail.com",
+    "Street": "Flaffisheaven 2c",
+    "ZipCode": "28244",
+    "City": "Flaffisparadise",
+    "Country": "Heaven"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "Anne ",
+    "LastName": "Bengtsson",
+    "PhoneNumber": "0709345426",
+    "Email": "mamma63@hotmail.com",
+    "Street": "Norregårdsvägen 13",
+    "ZipCode": "28234",
+    "City": "Tyringe",
+    "Country": "Sweden"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "Waard",
+    "LastName": "Bengtsson",
+    "PhoneNumber": "123456789",
+    "Email": "hellish@being.com",
+    "Street": "Fiery pits of hell 4a",
+    "ZipCode": "666",
+    "City": "Hells gates valley",
+    "Country": "Hell"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "Richard",
+    "LastName": "korven",
+    "PhoneNumber": "0709765432",
+    "Email": "miche59@gmail.com",
+    "Street": "Norreårdsvägen 13",
+    "ZipCode": "28234",
     "City": "Tyringe",
     "Country": "Sweden"
   }
