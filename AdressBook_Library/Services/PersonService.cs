@@ -3,6 +3,7 @@ using AdressBook_Library.Models;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Security.AccessControl;
 
 namespace AdressBook_Library.Services
 {
@@ -10,9 +11,9 @@ namespace AdressBook_Library.Services
     {
         public PersonService(IFileService fileservice)
         {
-            _fileservice = fileservice;
+            _fileService = fileservice;
         }
-        private readonly IFileService _fileservice;
+        private readonly IFileService _fileService;
 
         private List<IPerson> _personList = new List<IPerson>();
 
@@ -23,14 +24,16 @@ namespace AdressBook_Library.Services
         {           
             try
             {
-                if (!string.IsNullOrWhiteSpace(person.Email))
+                if(person != null)
                 {
-                    _personList.Add(person);
-                    _fileservice.WriteToFile(_personList);
-                    PersonListUpdated?.Invoke(this, EventArgs.Empty); // använd varje gång man gör något med listan
-                    return true;
-
-                }
+                    if (!_personList.Any(p => p.Email == person.Email))
+                    {
+                        _personList.Add(person);
+                        _fileService.WriteToFile(_personList);
+                        PersonListUpdated?.Invoke(this, EventArgs.Empty); // använd varje gång man gör något med listan
+                        return true;
+                    }
+                }          
             }
             catch (Exception e) { Debug.WriteLine(e.Message); }
             return false;
@@ -38,36 +41,44 @@ namespace AdressBook_Library.Services
 
         public bool DeletePerson(string email)
         {
-            return true;
-        }
-
-        public void Deserializer()
-        {
-
+            for (int i = 0; i < _personList.Count; i++)
+            {
+                if (_personList[i].Email == email)
+                {
+                    _personList.RemoveAt(i);        
+                    _fileService.WriteToFile(_personList);
+                    PersonListUpdated?.Invoke(this, EventArgs.Empty);
+                    return true;
+                }
+            }
+            return false;
         }
 
         public IEnumerable<IPerson> GetAllPersonsFromList()
         {
             try
             {
-                var JsonizedList = _fileservice.ReadFromFile();
+                var JsonizedList = _fileService.ReadFromFile();
 
                 if (!string.IsNullOrEmpty(JsonizedList))
                 {
                     _personList = JsonConvert.DeserializeObject<List<IPerson>>(JsonizedList, new JsonSerializerSettings
                     { TypeNameHandling = TypeNameHandling.Auto })!;
-
                     return _personList;
                 }
             }
             catch (Exception e) { Debug.WriteLine(e.Message); }
             return null!;
-
         }
 
-        public void GetPersonFromList(string email)
+        public IPerson GetPersonFromList(string email)
         {
-
+            var person =_personList.FirstOrDefault(x => x.Email == email);
+            if(person != null)
+            {
+                return person;
+            }
+            return null!;
         }
     }
 }

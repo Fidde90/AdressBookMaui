@@ -8,7 +8,7 @@
     xmlns:pages="clr-namespace:AdressBookMaui.Pages"
     
     Shell.FlyoutBehavior="Flyout"
-    Shell.NavBarIsVisible="False"
+ 
     Title="AdressBookMaui">
 
     <FlyoutItem Title="Home">
@@ -23,5 +23,9 @@
         <ShellContent Title="Details" Route="PersonsDetailsPage" ContentTemplate="{DataTemplate pages:PersonDetailsPage}"/>
     </FlyoutItem>
 
+
+    <FlyoutItem Title="Edit">
+        <ShellContent Title="Edit contact" Route="EditPersonPage" ContentTemplate="{DataTemplate pages:EditPersonPage}"/>
+    </FlyoutItem>
 
 </Shell>

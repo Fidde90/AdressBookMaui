@@ -1,5 +1,6 @@
 ﻿using AdressBook_Library.Interfaces;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 
 namespace AdressBookMaui.ViewModels
@@ -7,7 +8,6 @@ namespace AdressBookMaui.ViewModels
     public partial class AllPersonsViewModel : ObservableObject
     {
         private readonly IPersonService _personService;
-
         public AllPersonsViewModel(IPersonService personService)
         {
             _personService = personService;
@@ -24,5 +24,30 @@ namespace AdressBookMaui.ViewModels
         [ObservableProperty]
         public ObservableCollection<IPerson> _observablePersonList = [];
 
+        [RelayCommand]
+        private async Task NvigateToDetails(IPerson person)
+        {
+            var parameter = new ShellNavigationQueryParameters
+            {
+                {"Person", person }
+            };
+
+            await Shell.Current.GoToAsync("//PersonsDetailsPage", parameter);
+        }
+
+        [RelayCommand]
+        private void Remove(IPerson person)
+        {
+            var succeed = _personService.DeletePerson(person.Email);
+
+            if (succeed)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
     }
 }

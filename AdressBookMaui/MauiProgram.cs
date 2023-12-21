@@ -4,6 +4,7 @@ using AdressBookMaui.ViewModels;
 using Microsoft.Extensions.Logging;
 using AdressBook_Library.Interfaces;
 
+
 namespace AdressBookMaui
 {
     public static class MauiProgram
@@ -19,8 +20,12 @@ namespace AdressBookMaui
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.AddSingleton<IPersonService,PersonService>();
+            builder.Services.AddSingleton<IPersonService, PersonService>();
             builder.Services.AddSingleton<IFileService, FileService>();
+            //builder.Services.AddSingleton<IFileService>(new FileService(Path.Combine(FileSystem.AppDataDirectory, "contactlist.json")));
+
+            builder.Services.AddSingleton<EditPersonPage>();
+            builder.Services.AddSingleton<EditPersonViewModel>();
 
             builder.Services.AddSingleton<PersonDetailsPage>();
             builder.Services.AddSingleton<PersonDetailsViewModel>();
@@ -32,7 +37,6 @@ namespace AdressBookMaui
             builder.Services.AddSingleton<AllPersonsViewModel>();
 
             builder.Logging.AddDebug();
-
 
             return builder.Build();
         }

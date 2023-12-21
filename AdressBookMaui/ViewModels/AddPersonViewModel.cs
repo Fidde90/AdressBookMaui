@@ -10,6 +10,7 @@ namespace AdressBookMaui.ViewModels
     {
         private readonly IPersonService _personService;
         private readonly AllPersonsViewModel _allPersonsViewModel;
+
         public AddPersonViewModel(IPersonService personService, AllPersonsViewModel allPersonsViewModel)
         {
             _allPersonsViewModel = allPersonsViewModel;

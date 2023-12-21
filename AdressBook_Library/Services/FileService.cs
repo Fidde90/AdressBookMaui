@@ -8,6 +8,11 @@ namespace AdressBook_Library.Services
     {
         private readonly string _filePath = @"C:\ContactsCsharp\AdressBookMaui\Test.json";
 
+        //public FileService(string filePath)
+        //{
+        //    _filePath = filePath;
+        //}
+
         public string ReadFromFile()
         {
             try

@@ -1,12 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:model="clr-namespace:AdressBook_Library.Models;assembly=AdressBook_Library"
+             xmlns:viewmodel ="clr-namespace:AdressBookMaui.ViewModels"
+             x:DataType="{x:Type viewmodel:PersonDetailsViewModel}"
+             
              x:Class="AdressBookMaui.Pages.PersonDetailsPage"
              Title="PersonDetailsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <ScrollView>
+        <Grid >
+            <VerticalStackLayout Margin="20">
+
+                <HorizontalStackLayout Margin="10,0,0,5">
+                    <Label Text="Name:" Margin="0,0,10,0"/>
+                    <Label Text="{Binding Person.FirstName}"/>
+                    <Label Text="{Binding Person.LastName}" Margin="5,0"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="10,0,0,5">
+                    <Label Text="Email:" Margin="0,0,10,0"/>
+                    <Label Text="{Binding Person.Email}" Margin="5,0"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="10,0,0,5">
+                    <Label Text="Phone number:" Margin="0,0,10,0"/>
+                    <Label Text="{Binding Person.PhoneNumber}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="10,10,0,0">
+                    <Label Text="Adress:" Margin="0,0,10,0"/>
+                    <Label Text="{Binding Person.Street}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text="{Binding Person.ZipCode}" Margin="65,0,0,0"/>
+                    <Label Text="{Binding Person.City}" Margin="10,0"/>
+                </HorizontalStackLayout>
+                <Label Text="{Binding Person.Country}" Margin="65,0,0,0"/>
+
+                <Button Text="Back to &quot;see all&quot;. " Command="{Binding BackToAllPersonsCommand}" Margin="10,50,10,10" MaximumWidthRequest="250" />
+                <Button Text="Back to &quot;add page&quot;. " Command="{Binding BackToAddPersonCommand}" Margin="10" MaximumWidthRequest="250" />
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>

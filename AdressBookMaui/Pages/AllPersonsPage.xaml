@@ -9,13 +9,12 @@
              x:Class="AdressBookMaui.Pages.AllPersonsPage"
              Title="AllPersonsPage">
 
-    <ScrollView>
+    <ScrollView Margin="10">
         <CollectionView  ItemsSource="{Binding ObservablePersonList}" >
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type model:Person}">
                     <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="10" Margin="0" >
                         <Grid RowDefinitions="auto" ColumnDefinitions="*,180">
-
                             <VerticalStackLayout Grid.Column="0">
                                 <HorizontalStackLayout>
                                     <Label Text="{Binding FirstName}" Margin="5" />
@@ -23,12 +22,10 @@
                                 </HorizontalStackLayout>
                                 <Label Text="{Binding Email}" Margin="3" />
                             </VerticalStackLayout>
-
                             <HorizontalStackLayout Grid.Column="1" >
-                                <Button Text="Details" Margin="5,5" Padding="20,10,20,10" BackgroundColor="SteelBlue"/>
-                                <Button Text="Delete" Margin="5,5" Padding="20,10,20,10" BackgroundColor="IndianRed"/>
+                                <Button CommandParameter="{Binding .}" Command="{Binding Path=NvigateToDetailsCommand, Source={RelativeSource AncestorType={x:Type viewmodel:AllPersonsViewModel}}}" Text="Details" Margin="5,5" Padding="20,10,20,10" BackgroundColor="SteelBlue"/>
+                                <Button CommandParameter="{Binding .}" Command="{Binding Path=RemoveCommand, Source={RelativeSource AncestorType={x:Type viewmodel:AllPersonsViewModel}}}" Text="Delete" Margin="5,5" Padding="20,10,20,10" BackgroundColor="IndianRed"/>
                             </HorizontalStackLayout>
-
                         </Grid>
                     </Frame>
                 </DataTemplate>

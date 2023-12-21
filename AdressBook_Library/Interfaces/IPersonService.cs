@@ -10,10 +10,8 @@ namespace AdressBook_Library.Interfaces
 
         IEnumerable<IPerson> GetAllPersonsFromList();
 
-        void GetPersonFromList(string email);
+        IPerson GetPersonFromList(string email);
 
         bool DeletePerson(string email);
-
-        void Deserializer();
     }
 }
