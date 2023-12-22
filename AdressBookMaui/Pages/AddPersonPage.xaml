@@ -37,7 +37,9 @@
 
             
                 <Button Command="{Binding AddPersonCommand}" Text="Add" Margin="0,50,0,20" Padding="0,10" BackgroundColor="green"/>
-                
+
+                <Label Text="Added!" IsVisible="{Binding Added}" Margin="0,50,0,20" Background="green" FontSize="20" TextColor="black" FontAttributes="Bold" HeightRequest="50" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="Fail!" IsVisible="{Binding Fail}" Margin="0,0,0,20" Background="DarkRed" FontSize="20" TextColor="black" FontAttributes="Bold" HeightRequest="50" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
             </VerticalStackLayout>
         </Grid>
     </ScrollView>

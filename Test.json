@@ -64,5 +64,159 @@
     "ZipCode": "28234",
     "City": "Tyringe",
     "Country": "Sweden"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "o",
+    "LastName": "o",
+    "PhoneNumber": "o",
+    "Email": "o",
+    "Street": "o",
+    "ZipCode": "o",
+    "City": "o",
+    "Country": "o"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "8",
+    "LastName": "8",
+    "PhoneNumber": "8",
+    "Email": "8",
+    "Street": "88",
+    "ZipCode": "8",
+    "City": "8",
+    "Country": "8"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "ö",
+    "LastName": "ö",
+    "PhoneNumber": "ö",
+    "Email": "ö",
+    "Street": "ö",
+    "ZipCode": "ö",
+    "City": "ö",
+    "Country": "ö"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "y",
+    "LastName": "y",
+    "PhoneNumber": "y",
+    "Email": "y",
+    "Street": "y",
+    "ZipCode": "y",
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "lkj",
+    "LastName": "kj",
+    "PhoneNumber": "kj",
+    "Email": "kj",
+    "Street": "lk",
+    "ZipCode": "j",
+    "City": "kj",
+    "Country": "lj"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "f",
+    "LastName": "f",
+    "PhoneNumber": "f",
+    "Email": "ff",
+    "Street": "f",
+    "ZipCode": "f",
+    "City": "f",
+    "Country": "f"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "f",
+    "LastName": "f",
+    "PhoneNumber": "f",
+    "Email": "ff3",
+    "Street": "f",
+    "ZipCode": "f",
+    "City": "f",
+    "Country": "f"
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": null,
+    "LastName": null,
+    "PhoneNumber": null,
+    "Email": "ff444",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "32234",
+    "LastName": null,
+    "PhoneNumber": null,
+    "Email": "2323",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "32234",
+    "LastName": null,
+    "PhoneNumber": null,
+    "Email": "2323534",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "asdfasdfdsf",
+    "LastName": null,
+    "PhoneNumber": null,
+    "Email": "sdfasdfdsaf",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "asdfasdf",
+    "LastName": null,
+    "PhoneNumber": null,
+    "Email": "asdfasdfasdfsadf",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": "as",
+    "LastName": null,
+    "PhoneNumber": null,
+    "Email": "asdfasdfw",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
+  },
+  {
+    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
+    "FirstName": null,
+    "LastName": null,
+    "PhoneNumber": null,
+    "Email": "ewrwewf43",
+    "Street": null,
+    "ZipCode": null,
+    "City": null,
+    "Country": null
   }
 ]
