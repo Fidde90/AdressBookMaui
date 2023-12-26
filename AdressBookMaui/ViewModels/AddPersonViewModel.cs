@@ -2,7 +2,6 @@
 using AdressBook_Library.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Microsoft.UI.Xaml.Controls.Primitives;
 using System.Collections.ObjectModel;
 
 
@@ -26,17 +25,20 @@ namespace AdressBookMaui.ViewModels
         public bool added;
 
         [ObservableProperty]
-        public bool fail;
+        public string? eventText;
+
+        [ObservableProperty]
+        public string? alertColor;
 
         [RelayCommand]
-       void  AddPerson()
+       void AddPerson()
         {
             if (!string.IsNullOrWhiteSpace(RegistrationForm.Email))
             {
                 var succeed = _personService.AddPersonToList(RegistrationForm)!;
                 if (succeed)
                 {
-                    _personService.PersonListUpdated += async (sender, e) =>
+                    _personService.PersonListUpdated += (sender, e) =>
                     {
                         _allPersonsViewModel.ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList());
                     };
@@ -53,16 +55,19 @@ namespace AdressBookMaui.ViewModels
         {
             if (trueOrFalse)
             {
+                EventText = "Contact added successfully";
+                AlertColor = "DarkSlateGrey";
                 Added = !Added;
                 await Task.Delay(2000);
                 Added = !Added;
-                RegistrationForm = new();
             }
             else
             {
-                Fail = !Fail;
-                await Task.Delay(2000);
-                Fail = !Fail;
+                AlertColor = "IndianRed";
+                EventText = "Either the contact already exists or something else went wrong";
+                Added = !Added;
+                await Task.Delay(3000);
+                Added = !Added;
             }
         }
     }

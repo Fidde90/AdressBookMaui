@@ -19,13 +19,8 @@
         <ShellContent Title="All" Route="AllPersonsPage" ContentTemplate="{DataTemplate pages:AllPersonsPage}"/>
     </FlyoutItem>
 
-    <FlyoutItem Title="Details">
+    <FlyoutItem Title="Details" FlyoutItemIsVisible="False">
         <ShellContent Title="Details" Route="PersonsDetailsPage" ContentTemplate="{DataTemplate pages:PersonDetailsPage}"/>
-    </FlyoutItem>
-
-
-    <FlyoutItem Title="Edit">
-        <ShellContent Title="Edit contact" Route="EditPersonPage" ContentTemplate="{DataTemplate pages:EditPersonPage}"/>
     </FlyoutItem>
 
 </Shell>

@@ -52,7 +52,6 @@ namespace AdressBookMaui.ViewModels
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
             Person = (query["Person"] as Person)!;
-
         }
     }
 }
