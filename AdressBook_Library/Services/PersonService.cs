@@ -17,7 +17,6 @@ namespace AdressBook_Library.Services
         public event EventHandler? PersonListUpdated;
 
 
-
         public void Edit(string email, IPerson person)
         {
             for (int i = 0; i < _personList.Count; i++)
@@ -31,6 +30,11 @@ namespace AdressBook_Library.Services
             }
         }
 
+        /// <summary>
+        /// Adds a contact to the list.
+        /// </summary>
+        /// <param name="contact">IContact</param>
+        /// <returns>true if the contact's email does not match anyone else's in the list, otherwise false</returns>
         public bool AddPersonToList(IPerson person)
         {           
             try
@@ -50,6 +54,12 @@ namespace AdressBook_Library.Services
             return false;
         }
 
+        /// <summary>
+        /// Checks if the contact excists via its email and delete him/her from the list.
+        /// Then the file on the computer gets updated with the modified list.
+        /// </summary>
+        /// <param name="email">the eamil value(string) of the contact</param>
+        /// <returns>true om the contact was deleted, false if the contact dosent excist</returns>
         public bool DeletePerson(string email)
         {
             for (int i = 0; i < _personList.Count; i++)
@@ -65,6 +75,10 @@ namespace AdressBook_Library.Services
             return false;
         }
 
+        /// <summary>
+        /// Checks if the list contains any values.
+        /// </summary>
+        /// <returns>returns the list of contacts if true, else null</returns>
         public IEnumerable<IPerson> GetAllPersonsFromList()
         {
             try
@@ -82,10 +96,32 @@ namespace AdressBook_Library.Services
             return null!;
         }
 
+        /// <summary>
+        /// Shows all information of the chosen contact.
+        /// </summary>
+        /// <param name="email">the email value of the contact(string)</param>
+        //public void GetPersonFromList(string email)
+        //{
+        //    Console.Clear();
+        //    for (int i = 0; i < _personList.Count; i++)
+        //    {
+        //        if (_personList[i].Email == email)
+        //        {
+        //            Console.ForegroundColor = ConsoleColor.White;
+        //            Console.WriteLine("\n------------------------------------------------------------------------------------");
+        //            Console.WriteLine($"\t{_personList[i].FirstName} {_personList[i].LastName}");
+        //            Console.WriteLine($"\t{_personList[i].Email}, {_personList[i].PhoneNumber}");
+        //            Console.WriteLine($"\t{_personList[i].Street}, {_personList[i].ZipCode}");
+        //            Console.WriteLine($"\t{_personList[i].City}, {_personList[i].Country}");
+        //            Console.WriteLine("------------------------------------------------------------------------------------");
+        //        }
+        //    }
+        //}
+
         public IPerson GetPersonFromList(string email)
         {
-            var person =_personList.FirstOrDefault(x => x.Email == email);
-            if(person != null)
+            var person = _personList.FirstOrDefault(x => x.Email == email);
+            if (person != null)
             {
                 return person;
             }

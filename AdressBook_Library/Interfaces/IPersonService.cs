@@ -1,6 +1,4 @@
-﻿using AdressBook_Library.Models;
-
-namespace AdressBook_Library.Interfaces
+﻿namespace AdressBook_Library.Interfaces
 {
     public interface IPersonService
     {
@@ -10,7 +8,9 @@ namespace AdressBook_Library.Interfaces
 
         IEnumerable<IPerson> GetAllPersonsFromList();
 
-        IPerson GetPersonFromList(string email);
+        //public void GetPersonFromList(string email);
+
+        public IPerson GetPersonFromList(string email);
 
         public void Edit(string email, IPerson person);
 
