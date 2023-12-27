@@ -1,57 +1,13 @@
 [
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "Angelina",
-    "LastName": "Rosén",
-    "PhoneNumber": "0708987654",
-    "Email": "angelinarosen93@hotmail.com",
-    "Street": "Stenbocksgatan 2c",
-    "ZipCode": "28233",
-    "City": "Tyringe",
-    "Country": "Sweden"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "Flaffis",
+    "FirstName": "Fredrik",
     "LastName": "Bengtsson",
-    "PhoneNumber": "0709927636",
-    "Email": "flaff@vavve@hotmail.com",
-    "Street": "Flaffisheaven 2c",
-    "ZipCode": "28244",
-    "City": "Flaffisparadise",
-    "Country": "Heaven"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "dfsdaf",
-    "LastName": "sdfasdf",
-    "PhoneNumber": "sdfasdf",
-    "Email": "asdfasdfa",
-    "Street": null,
-    "ZipCode": null,
-    "City": null,
-    "Country": null
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "sdf",
-    "LastName": "sdf",
-    "PhoneNumber": "sdf",
-    "Email": "sdf",
-    "Street": "df",
-    "ZipCode": "sdf",
-    "City": null,
-    "Country": null
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "sdfsdf",
-    "LastName": "sfsad",
-    "PhoneNumber": "sdfsdas",
-    "Email": "fasdfsadf",
-    "Street": null,
-    "ZipCode": null,
-    "City": null,
-    "Country": null
+    "PhoneNumber": "0709999999",
+    "Email": "MazeOfTorment@MorbidAngel.com",
+    "Street": "Somewhere in time 2c",
+    "ZipCode": "1000000000",
+    "City": "The Abyss",
+    "Country": "Antarctia"
   }
 ]

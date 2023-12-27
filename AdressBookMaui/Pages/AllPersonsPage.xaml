@@ -13,7 +13,7 @@
         <CollectionView  ItemsSource="{Binding ObservablePersonList}"  >
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type model:Person}" >
-                    <VerticalStackLayout Padding="20,30,20,0">
+                    <VerticalStackLayout Padding="20,30,20,0" >
                         <Border Stroke="Transparent" HeightRequest="80" Padding="10" Background="#262626" StrokeShape="RoundRectangle 20 5">
                             <Border.Shadow>
                                 <Shadow Brush="PowderBlue" Offset="0,1" Opacity="0.9" />

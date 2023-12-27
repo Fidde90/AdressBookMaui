@@ -7,6 +7,7 @@ namespace AdressBook_Library.Services
     public class FileService : IFileService
     {
         private readonly string _filePath = @"C:\ContactsCsharp\AdressBookMaui\Test.json";
+        //private readonly string _filePath;
 
         //public FileService(string filePath)
         //{
