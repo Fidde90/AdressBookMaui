@@ -51,6 +51,7 @@ namespace AdressBookMaui.ViewModels
 
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
+            IsStackVisible = false;
             Person = (query["Person"] as Person)!;
         }
     }

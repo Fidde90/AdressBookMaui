@@ -25,6 +25,8 @@ namespace AdressBookMaui
             builder.Services.AddSingleton<IFileService, FileService>();
             //builder.Services.AddSingleton<IFileService>(new FileService(Path.Combine(FileSystem.AppDataDirectory, "contactlist.json")));
 
+
+
             builder.Services.AddSingleton<PersonDetailsPage>();
             builder.Services.AddSingleton<PersonDetailsViewModel>();
 

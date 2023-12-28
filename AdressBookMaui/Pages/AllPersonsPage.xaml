@@ -7,28 +7,28 @@
              x:DataType="{x:Type viewmodel:AllPersonsViewModel}"
              
              x:Class="AdressBookMaui.Pages.AllPersonsPage"
-             Title="AllPersonsPage">
+             Title="All contacts">
 
     <ScrollView BackgroundColor="#171717">
         <CollectionView  ItemsSource="{Binding ObservablePersonList}"  >
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type model:Person}" >
                     <VerticalStackLayout Padding="20,30,20,0" >
-                        <Border Stroke="Transparent" HeightRequest="80" Padding="10" Background="#262626" StrokeShape="RoundRectangle 20 5">
+                        <Border Stroke="Transparent" MinimumHeightRequest="80" Padding="10" Background="#262626" StrokeShape="RoundRectangle 20 5">
                             <Border.Shadow>
                                 <Shadow Brush="PowderBlue" Offset="0,1" Opacity="0.9" />
                             </Border.Shadow>
                             <Grid ColumnDefinitions="*,180" RowDefinitions="auto" >
                                 <VerticalStackLayout Grid.Column="0">
                                     <HorizontalStackLayout>
-                                        <Label Text="{Binding FirstName}" Margin="5" />
-                                        <Label Text="{Binding LastName}" Margin="5" />
+                                        <Label Text="{Binding FirstName}" Margin="5" TextColor="White" />
+                                        <Label Text="{Binding LastName}" Margin="5" TextColor="White"/>
                                     </HorizontalStackLayout>
-                                    <Label Text="{Binding Email}" Margin="3" />
+                                    <Label Text="{Binding Email}" Margin="3" TextColor="White"/>
                                 </VerticalStackLayout>
                                 <HorizontalStackLayout Grid.Column="1">
-                                    <Button CommandParameter="{Binding .}" Command="{Binding Path=NvigateToDetailsCommand, Source={RelativeSource AncestorType={x:Type viewmodel:AllPersonsViewModel}}}" Text="Details" Margin="5,5" Padding="20,10,20,10" BackgroundColor="DarkSlateGrey"/>
-                                    <Button CommandParameter="{Binding .}" Command="{Binding Path=RemoveCommand, Source={RelativeSource AncestorType={x:Type viewmodel:AllPersonsViewModel}}}" Text="Delete" Margin="5,5" Padding="20,10,20,10" BackgroundColor="DarkRed" />
+                                    <Button CommandParameter="{Binding .}" Command="{Binding Path=NvigateToDetailsCommand, Source={RelativeSource AncestorType={x:Type viewmodel:AllPersonsViewModel}}}" Text="Details" Margin="5,5" Padding="20,10,20,10" BackgroundColor="DarkSlateGrey" MaximumHeightRequest="50"/>
+                                    <Button CommandParameter="{Binding .}" Command="{Binding Path=RemoveCommand, Source={RelativeSource AncestorType={x:Type viewmodel:AllPersonsViewModel}}}" Text="Delete" Margin="5,5" Padding="20,10,20,10" BackgroundColor="DarkRed" MaximumHeightRequest="50" />
                                 </HorizontalStackLayout>
                             </Grid>
                         </Border>

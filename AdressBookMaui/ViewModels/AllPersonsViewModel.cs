@@ -38,16 +38,7 @@ namespace AdressBookMaui.ViewModels
         [RelayCommand]
         private void Remove(IPerson person)
         {
-            var succeed = _personService.DeletePerson(person.Email);
-
-            if (succeed)
-            {
-              
-            }
-            else
-            {
-
-            }
+            _personService.DeletePerson(person.Email);
         }
     }
 }

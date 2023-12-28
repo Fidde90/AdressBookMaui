@@ -100,24 +100,6 @@ namespace AdressBook_Library.Services
         /// Shows all information of the chosen contact.
         /// </summary>
         /// <param name="email">the email value of the contact(string)</param>
-        //public void GetPersonFromList(string email)
-        //{
-        //    Console.Clear();
-        //    for (int i = 0; i < _personList.Count; i++)
-        //    {
-        //        if (_personList[i].Email == email)
-        //        {
-        //            Console.ForegroundColor = ConsoleColor.White;
-        //            Console.WriteLine("\n------------------------------------------------------------------------------------");
-        //            Console.WriteLine($"\t{_personList[i].FirstName} {_personList[i].LastName}");
-        //            Console.WriteLine($"\t{_personList[i].Email}, {_personList[i].PhoneNumber}");
-        //            Console.WriteLine($"\t{_personList[i].Street}, {_personList[i].ZipCode}");
-        //            Console.WriteLine($"\t{_personList[i].City}, {_personList[i].Country}");
-        //            Console.WriteLine("------------------------------------------------------------------------------------");
-        //        }
-        //    }
-        //}
-
         public IPerson GetPersonFromList(string email)
         {
             var person = _personList.FirstOrDefault(x => x.Email == email);

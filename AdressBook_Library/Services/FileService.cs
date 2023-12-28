@@ -7,14 +7,14 @@ namespace AdressBook_Library.Services
     public class FileService : IFileService
     {
         private readonly string _filePath = @"C:\ContactsCsharp\AdressBookMaui\Test.json";
+        //private readonly string _filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Contacts.json");
+
         //private readonly string _filePath;
 
         //public FileService(string filePath)
         //{
         //    _filePath = filePath;
         //}
-
-
 
         /// <summary>
         /// If the file excists at the enterd filepath, the streamreader reads the file, and returns the content.
@@ -33,7 +33,8 @@ namespace AdressBook_Library.Services
                 }
             }
             catch (Exception e) { Debug.WriteLine(e.Message); }
-            return null ?? "";
+            return null ?? string.Empty;
+            //return null!;
         }
 
 

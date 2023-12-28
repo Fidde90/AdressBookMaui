@@ -8,8 +8,6 @@
 
         IEnumerable<IPerson> GetAllPersonsFromList();
 
-        //public void GetPersonFromList(string email);
-
         public IPerson GetPersonFromList(string email);
 
         public void Edit(string email, IPerson person);
