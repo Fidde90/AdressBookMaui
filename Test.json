@@ -1,79 +1,13 @@
 [
   {
     "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "Zombie",
-    "LastName": "Zombiesson",
-    "PhoneNumber": "4321",
-    "Email": "Zombie90@hotmail.com",
-    "Street": "Tombstone 5",
-    "ZipCode": "78976",
-    "City": "Garden of the dead",
-    "Country": "Cemetery"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
     "FirstName": "Fredrik",
     "LastName": "Bengtsson",
-    "PhoneNumber": "0709927636",
-    "Email": "fredrik.t.bengtsson@hotmail.com",
-    "Street": "Stenbocksgatan 2c",
-    "ZipCode": "28233",
-    "City": "Tyringe",
-    "Country": "Sweden"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "Någon",
-    "LastName": "Någonsson",
-    "PhoneNumber": "123456789",
-    "Email": "någon@hotmail.com",
-    "Street": "Någonstans 3c",
-    "ZipCode": "12345",
-    "City": "Någonstad",
-    "Country": "Någotland"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "hej",
-    "LastName": "hejsson",
-    "PhoneNumber": "123456",
-    "Email": "hej@hotmail.com",
-    "Street": "hej 5d",
-    "ZipCode": "23432",
-    "City": "hejstad",
-    "Country": "hejland"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "Snaggletooth",
-    "LastName": "Kilmister",
-    "PhoneNumber": "123456788",
-    "Email": "Rocknroll@hotmail.com",
-    "Street": "rocknroll street 2c",
-    "ZipCode": "12345",
-    "City": "Angel city ",
-    "Country": "Rocknroll"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "Slayer",
-    "LastName": "Razor",
-    "PhoneNumber": "123456789",
-    "Email": "Kreator@Exumer.com",
-    "Street": "Demolition Hammer 2c",
-    "ZipCode": "43234",
-    "City": "Sodom",
-    "Country": "Dark Angel"
-  },
-  {
-    "$type": "AdressBook_Library.Models.Person, AdressBook_Library",
-    "FirstName": "Kill Again",
-    "LastName": "At Dawn They Sleep",
-    "PhoneNumber": "Crionics",
-    "Email": "Hell Awaits",
-    "Street": "Show No Mercy",
-    "ZipCode": "Tormentor",
-    "City": "Die By The Sword",
-    "Country": "Necrophiliac"
+    "PhoneNumber": "0709999999",
+    "Email": "MazeOfTorment@MorbidAngel.com",
+    "Street": "Somewhere in time 2c",
+    "ZipCode": "1000000000",
+    "City": "The Abyss",
+    "Country": "Antarctia"
   }
 ]

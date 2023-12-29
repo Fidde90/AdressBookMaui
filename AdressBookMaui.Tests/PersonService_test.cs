@@ -71,7 +71,7 @@ namespace AdressBookMaui.Tests
             //Arrange
             FileService f = new FileService();
             PersonService p = new PersonService(f);
-
+            bool expected = true;
             IPerson person = new Person
             {
                 FirstName = "Fredrik",
@@ -89,6 +89,7 @@ namespace AdressBookMaui.Tests
 
             //Assert
             Assert.True(res);
+            Assert.Equal(expected,res);
         }
 
         [Fact]
