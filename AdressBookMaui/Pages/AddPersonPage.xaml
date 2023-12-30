@@ -10,50 +10,49 @@
 
     <ScrollView>
         <Grid  BackgroundColor="#171717">
-            <Border Stroke="PowderBlue" StrokeThickness="1" MinimumHeightRequest="80" Padding="30,10,30,0" Background="#262626" StrokeShape="RoundRectangle 20 5">
+            <Border Stroke="PowderBlue" StrokeThickness="1"  Padding="30,10,30,0" Background="#262626" StrokeShape="RoundRectangle 20 5">
                 <Border.Shadow>
                     <Shadow Brush="PowderBlue" Offset="0,0" Opacity="0.9" />
                 </Border.Shadow>
                 <VerticalStackLayout Margin="20">
-              
-                    
+
                     <Label Text="First Name" FontAttributes="Bold" Margin="0,10"  TextColor="FloralWhite"/>
-                <Entry Text="{Binding RegistrationForm.FirstName}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
+                    <Entry Text="{Binding RegistrationForm.FirstName}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
 
-                <Label Text="Last Name" FontAttributes="Bold" Margin="0,10"   TextColor="FloralWhite"/>
-                <Entry  Text="{Binding RegistrationForm.LastName}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
+                    <Label Text="Last Name" FontAttributes="Bold" Margin="0,10"   TextColor="FloralWhite"/>
+                    <Entry  Text="{Binding RegistrationForm.LastName}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
 
-                <Label Text="Phone Number" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
-                <Entry Text="{Binding RegistrationForm.PhoneNumber}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
+                    <Label Text="Phone Number" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
+                    <Entry Text="{Binding RegistrationForm.PhoneNumber}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
 
-                <Label Text="Email" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
-                <Entry Text="{Binding RegistrationForm.Email}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
+                    <Label Text="Email" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
+                    <Entry Text="{Binding RegistrationForm.Email}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
 
-                <Label Text="Street" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
-                <Entry Text="{Binding RegistrationForm.Street}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
+                    <Label Text="Street" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
+                    <Entry Text="{Binding RegistrationForm.Street}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
 
-                <Label Text="ZipCode" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
-                <Entry Text="{Binding RegistrationForm.ZipCode}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
+                    <Label Text="ZipCode" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
+                    <Entry Text="{Binding RegistrationForm.ZipCode}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
 
-                <Label Text="City" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
-                <Entry Text="{Binding RegistrationForm.City}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
+                    <Label Text="City" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
+                    <Entry Text="{Binding RegistrationForm.City}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
 
-                <Label Text="Country" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
-                <Entry Text="{Binding RegistrationForm.Country}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
+                    <Label Text="Country" Margin="0,10" FontAttributes="Bold" TextColor="FloralWhite"/>
+                    <Entry Text="{Binding RegistrationForm.Country}" TextColor="{AppThemeBinding Light=White, Dark=White}"/>
 
-                <Frame IsVisible="{Binding Added}" BackgroundColor="{Binding AlertColor}" 
+                    <Frame IsVisible="{Binding Added}" BackgroundColor="{Binding AlertColor}" 
                      Margin="0,10,0,0" CornerRadius="20">
 
-                    <Label   Text="{Binding EventText}"
+                        <Label   Text="{Binding EventText}"
                              TextColor="FloralWhite"
                              HorizontalTextAlignment="Center"
                              VerticalTextAlignment="Center"                      
                              FontSize="17"/>
-                </Frame>
+                    </Frame>
 
-                <Button Command="{Binding AddPersonCommand}" Text="Add" TextColor="Black" FontAttributes="Bold" Margin="0,20,0,20" Padding="0,10" BackgroundColor="DarkSlateGrey" BorderColor="PowderBlue"/>
-              
-            </VerticalStackLayout>
+                    <Button Command="{Binding AddPersonCommand}" Text="Add" TextColor="Black" FontAttributes="Bold" Margin="0,20,0,20" Padding="0,10" BackgroundColor="DarkSlateGrey" BorderColor="PowderBlue"/>
+
+                </VerticalStackLayout>
             </Border>
         </Grid>
     </ScrollView>

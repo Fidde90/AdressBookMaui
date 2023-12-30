@@ -17,7 +17,6 @@ namespace AdressBook_Library.Services
         public event EventHandler? PersonListUpdated;
 
 
-
         /// <summary>
         /// Adds a contact to the list.
         /// </summary>
@@ -33,7 +32,7 @@ namespace AdressBook_Library.Services
                     {
                         _personList.Add(person);
                         _fileService.WriteToFile(_personList);
-                        PersonListUpdated?.Invoke(this, EventArgs.Empty); // använd varje gång man gör något med listan
+                        PersonListUpdated?.Invoke(this, EventArgs.Empty);
                         return true;
                     }
                 }

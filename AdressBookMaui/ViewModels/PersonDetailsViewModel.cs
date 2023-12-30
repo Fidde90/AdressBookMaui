@@ -9,7 +9,7 @@ namespace AdressBookMaui.ViewModels
     {
         private readonly IPersonService _personService;
 
-        public PersonDetailsViewModel(IPersonService personService, AllPersonsViewModel allPersonsViewModel)
+        public PersonDetailsViewModel(IPersonService personService)
         {
             _personService = personService;
         }
@@ -20,6 +20,10 @@ namespace AdressBookMaui.ViewModels
         [ObservableProperty]
         bool isStackVisible;
 
+
+        /// <summary>
+        /// Hides the edit options and saves the new values to a person.
+        /// </summary>
         [RelayCommand]
         public void SaveBtn()
         {
@@ -46,7 +50,7 @@ namespace AdressBookMaui.ViewModels
         [RelayCommand]
         private async Task BackToAddPerson()
         {
-            await Shell.Current.GoToAsync("//AddPersonPage");
+            await Shell.Current.GoToAsync("//AddPersonPage");           
         }
 
         public void ApplyQueryAttributes(IDictionary<string, object> query)

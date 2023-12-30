@@ -4,10 +4,10 @@ namespace AdressBookMaui.Pages
 {
     public partial class AddPersonPage : ContentPage
     {
-        public AddPersonPage(AddPersonViewModel addPersonViewModel)
+        public AddPersonPage(AddPersonViewModel vm)
         {
             InitializeComponent();
-            BindingContext = addPersonViewModel;
+            BindingContext = vm;
         }
     }
 }

@@ -8,12 +8,15 @@ namespace AdressBookMaui.ViewModels
     public partial class AllPersonsViewModel : ObservableObject
     {
         private readonly IPersonService _personService;
+
+
         public AllPersonsViewModel(IPersonService personService)
         {
             _personService = personService;
+         
 
             if (_personService.GetAllPersonsFromList() != null)
-                ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList())!;//This fix
+                ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList())!;
 
             _personService.PersonListUpdated += (sender, e) =>
             {

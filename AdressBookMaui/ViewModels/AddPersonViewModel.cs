@@ -4,7 +4,6 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 
-
 namespace AdressBookMaui.ViewModels
 {
     public partial class AddPersonViewModel : ObservableObject
@@ -14,12 +13,13 @@ namespace AdressBookMaui.ViewModels
 
         public AddPersonViewModel(IPersonService personService, AllPersonsViewModel allPersonsViewModel)
         {
-            _allPersonsViewModel = allPersonsViewModel;
             _personService = personService;
+            _allPersonsViewModel = allPersonsViewModel;
         }
 
+
         [ObservableProperty]
-        private Person _registrationForm = new();
+        public Person _registrationForm = new();
 
         [ObservableProperty]
         public bool added;
@@ -30,8 +30,11 @@ namespace AdressBookMaui.ViewModels
         [ObservableProperty]
         public string? alertColor;
 
+        /// <summary>
+        /// Adds a Person to a list and clears the registrationform if the email is valid.
+        /// </summary>
         [RelayCommand]
-       void AddPerson()
+        void AddPerson()
         {
             if (!string.IsNullOrWhiteSpace(RegistrationForm.Email))
             {
@@ -42,8 +45,8 @@ namespace AdressBookMaui.ViewModels
                     {
                         _allPersonsViewModel.ObservablePersonList = new ObservableCollection<IPerson>(_personService.GetAllPersonsFromList());
                     };
-                    RegistrationForm = new();
 
+                    RegistrationForm = new();
                     _ = TrueOrFalse(true);
                 }
                 else
@@ -51,6 +54,12 @@ namespace AdressBookMaui.ViewModels
             }
         }
 
+
+        /// <summary>
+        /// Writes a diffrent messages on the page depending if the condition is true or fasle.
+        /// </summary>
+        /// <param name="trueOrFalse">A bool value that determines whether it should be a true or false message</param>
+        /// <returns></returns>
         async Task TrueOrFalse(bool trueOrFalse)
         {
             if (trueOrFalse)
